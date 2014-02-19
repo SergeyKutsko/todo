@@ -21,3 +21,4 @@ gem 'devise'
 gem 'ember-rails'
 gem 'ember-source'
 gem 'emblem-rails'
+gem "jquery-rails"
