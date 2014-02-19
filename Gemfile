@@ -17,3 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem "active_model_serializers"
 gem 'devise'
+
+gem 'ember-rails'
+gem 'ember-source'
+gem 'emblem-rails'
