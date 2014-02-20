@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-md-1
+    .col-md-1 ID
+    .col-md-4 Description
+    .col-md-1 Priority
+    .col-md-3 Actions
+
+  each model
+    .row
+      .col-md-1
+      .col-md-1
+        = id
+      .col-md-4
+        = description
+      .col-md-1
+        = priority
+      .col-md-1
+        a click='delete this'
+          | Delete
+
+  .row
+  .col-md-1
+  a click='create'
+    | Create

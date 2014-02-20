@@ -1,0 +1,20 @@
+.container
+  .bs-example
+    nav.navbar.navbar-default role="navigation"
+      #navbarCollapse.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          unless window.signedIn
+            li
+              = link-to 'login'
+                | Login
+            li
+              = link-to 'register'
+                | Register
+          else
+            li
+              = link-to 'logout'
+                | Logout
+            li
+              = link-to 'todos'
+                | Todos
+  = outlet

@@ -1,0 +1,10 @@
+.row
+  form.form-inline submit="register"
+    h2 Register
+    = input value=email type="text" class="form-control" placeholder="Email"
+    = input value=password type="password" class="form-control" placeholder="Password"
+    = input value=password_confirmation type="password" class="form-control" placeholder="Password Confirmation"
+    = input type="submit" class="btn" value="Register"
+  if errorMessage
+    .alert.alert-danger
+      == FormatErrorMessages errorMessage

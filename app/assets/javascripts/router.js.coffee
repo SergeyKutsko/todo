@@ -1,6 +1,11 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 App.Router.map ()->
-  @resource('todos')
+  @route 'login'
+  @route 'logout'
+  @route 'register'
+  @resource 'todos', ->
+  	@route('create')
+
 
 
