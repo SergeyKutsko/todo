@@ -13,6 +13,7 @@ App.LoginController = Ember.Controller.extend
       data: JSON.stringify(data)
       dataType: 'json'
       success: (r)->
+        App.reset()
         App.currentUser.setProperties(r['user'])
         self.transitionToRoute('todos');
       error: (r)->
