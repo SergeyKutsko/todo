@@ -6,7 +6,5 @@ DS.RESTAdapter.reopen
     'Content-type': 'application/json'
 
 
-
 App.Store = DS.Store.extend
-  namespace: 'api/v1'
   adapter: DS.RESTAdapter.create()

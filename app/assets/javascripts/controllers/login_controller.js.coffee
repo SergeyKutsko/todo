@@ -13,7 +13,7 @@ App.LoginController = Ember.Controller.extend
       data: JSON.stringify(data)
       dataType: 'json'
       success: (r)->
-        window.signedIn = true
+        App.currentUser.setProperties(r['user'])
         self.transitionToRoute('todos');
       error: (r)->
         self.set('errorMessage', JSON.parse(r.responseText).errors )

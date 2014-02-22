@@ -2,10 +2,10 @@
 
 App.Router.map ()->
   @route 'login'
-  @route 'logout'
   @route 'register'
   @resource 'todos', ->
   	@route('create')
+  	@route('update', path: ":todo_id" )
 
 
 

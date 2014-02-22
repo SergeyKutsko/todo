@@ -6,7 +6,7 @@
     .col-md-1 Priority
     .col-md-3 Actions
 
-  each model
+  each arrangedContent
     .row
       .col-md-1
       .col-md-1
@@ -18,8 +18,14 @@
       .col-md-1
         a click='delete this'
           | Delete
+      .col-md-1
+        = link-to 'todos.update' this
+          | Update
 
   .row
   .col-md-1
-  a click='create'
+  = link-to 'todos.create'
     | Create
+
+  .row
+  = outlet

@@ -1,0 +1,9 @@
+form.form-inline submit="create"
+  h2 Create New Todo
+  = input value=description type="text" class="form-control" placeholder="Description"
+  = input value=priority type="text" class="form-control" placeholder="Priority"
+  = input type="submit" class="btn" value="Create"
+if errorMessage
+  .alert.alert-danger
+    = FormatErrorMessages errorMessage
+

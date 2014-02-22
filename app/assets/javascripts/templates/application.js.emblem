@@ -3,7 +3,7 @@
     nav.navbar.navbar-default role="navigation"
       #navbarCollapse.collapse.navbar-collapse
         ul.nav.navbar-nav
-          unless window.signedIn
+          unless signedIn
             li
               = link-to 'login'
                 | Login
@@ -12,7 +12,7 @@
                 | Register
           else
             li
-              = link-to 'logout'
+              a click="logout"
                 | Logout
             li
               = link-to 'todos'

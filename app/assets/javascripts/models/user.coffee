@@ -1,5 +1,8 @@
-App.User = DS.Model.extend
-  signedIn: ->
-  	@get('id')
+App.User = Ember.Object.extend({})
 
-  email: DS.attr('string')
+
+App.currentUser =  App.User.create({id: false})
+
+$ ->
+  cu = $('head').data('user') || {}
+  App.currentUser.setProperties(cu)

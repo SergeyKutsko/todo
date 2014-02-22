@@ -1,0 +1,10 @@
+form.form-inline submit="update model"
+  h2 Update Todo
+  = input value=model.description type="text" class="form-control" placeholder="Description"
+  = input value=model.priority type="text" class="form-control" placeholder="Priority"
+  = input type="submit" class="btn" value="Done"
+
+if errorMessage
+  .alert.alert-danger
+    = FormatErrorMessages errorMessage
+
